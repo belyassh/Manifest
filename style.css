@@ -1,39 +1,62 @@
-html, body {
+
+body {
   margin: 0;
-  padding: 0;
   background: black;
+  font-family: 'Courier New', monospace;
+  color: #f5deb3;
   overflow: hidden;
-  font-family: monospace;
 }
 
-canvas {
-  display: block;
-  image-rendering: pixelated;
+#scene {
+  position: relative;
   width: 100vw;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.terminal {
+.fire {
   position: absolute;
   bottom: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.85);
-  color: #0f0;
-  padding: 10px;
-  box-sizing: border-box;
+  width: 128px;
+  height: auto;
+  z-index: 1;
+}
+
+.fire.left { left: 5%; }
+.fire.right { right: 5%; }
+
+.scroll {
+  position: relative;
   z-index: 2;
+  width: 70vw;
+  max-width: 600px;
+  text-align: center;
 }
 
-#terminal-output {
-  font-size: 13px;
-  white-space: pre-line;
-}
-
-#terminal-input {
+.scroll-img {
   width: 100%;
-  background: black;
-  color: #0f0;
-  border: none;
-  font-size: 13px;
-  padding: 6px;
+  display: block;
+}
+
+.scroll-text {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  right: 10%;
+  bottom: 10%;
+  padding: 1em;
+  font-size: 1em;
+  line-height: 1.5em;
+  pointer-events: none;
+}
+
+.scroll-levitate {
+  animation: floatScroll 3s ease-in-out infinite alternate;
+}
+
+@keyframes floatScroll {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
 }
