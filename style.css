@@ -89,13 +89,14 @@ body {
   overflow-y: auto;
   white-space: pre-wrap;
   margin-bottom: 5px;
+  color: #00eb27;
 }
 
 #terminal-input {
   width: 100%;
   background: black;
   border: none;
-  color: #f5deb3;
+  color: #00eb27;
   font-family: monospace;
   font-size: 1em;
   outline: none;
