@@ -67,3 +67,36 @@ body {
   0%   { transform: translateY(0); }
   100% { transform: translateY(-10px); }
 }
+
+.terminal {
+  position: absolute;
+  bottom: 20px;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid #ff8c00;
+  padding: 10px;
+  color: #f5deb3;
+  font-family: monospace;
+  font-size: 1em;
+  z-index: 10;
+  box-shadow: 0 0 10px #ff8c00;
+}
+
+.terminal-output {
+  height: 150px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  margin-bottom: 5px;
+}
+
+#terminal-input {
+  width: 100%;
+  background: black;
+  border: none;
+  color: #f5deb3;
+  font-family: monospace;
+  font-size: 1em;
+  outline: none;
+}
