@@ -38,7 +38,7 @@ body {
   position: relative;
   z-index: 2;
   width: 70vw;
-  max-width: 600px;
+  max-width: 1000px;
   text-align: center;
 }
 
@@ -60,7 +60,7 @@ body {
 }
 
 .scroll-levitate {
-  animation: floatScroll 3s ease-in-out infinite alternate;
+  animation: floatScroll 5s ease-in-out infinite alternate;
 }
 
 @keyframes floatScroll {
