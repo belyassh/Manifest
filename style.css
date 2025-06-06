@@ -23,7 +23,7 @@ body {
   height: auto;
   z-index: 1;
   filter: drop-shadow(0 0 20px rgba(255, 140, 0, 0.6));
-  animation: flicker 0.2s infinite alternate;
+  animation: flicker 1.0s infinite alternate;
 }
 
 .fire.left { left: 5%; }
