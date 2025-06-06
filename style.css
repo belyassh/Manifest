@@ -1,0 +1,39 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background: black;
+  overflow: hidden;
+  font-family: monospace;
+}
+
+canvas {
+  display: block;
+  image-rendering: pixelated;
+  width: 100vw;
+  height: 100vh;
+}
+
+.terminal {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  color: #0f0;
+  padding: 10px;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+#terminal-output {
+  font-size: 13px;
+  white-space: pre-line;
+}
+
+#terminal-input {
+  width: 100%;
+  background: black;
+  color: #0f0;
+  border: none;
+  font-size: 13px;
+  padding: 6px;
+}
