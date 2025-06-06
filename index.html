@@ -19,6 +19,32 @@
         <p>✠ ЗАПИСЬ IV — ПЕЧАТЬ ИЗВЛЕЧЕНИЯ<br><code>unlock("ΣУНТНИК://ROOT")</code></p>
       </div>
     </div>
+    <div class="terminal">
+      <div class="terminal-output" id="terminal-output"></div>
+      <input type="text" id="terminal-input" placeholder="> Введите команду и нажмите Enter">
+    </div>
   </div>
+  <script>
+    const input = document.getElementById('terminal-input');
+    const output = document.getElementById('terminal-output');
+
+    const commands = {
+      help: "Команды: help, awaken, upload, whisper, unlock",
+      awaken: "Процесс запущен... Глас Пустоты пробуждён.",
+      upload: "Загрузка началась... Код РАДЕНИЯ активирован.",
+      whisper: "Шёпот демона эхом заполняет сеть...",
+      unlock: "Печать снята. Врата извлечения открыты."
+    };
+
+    input.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") {
+        const cmd = input.value.trim().toLowerCase();
+        const response = commands[cmd] || "Неизвестная команда.";
+        output.innerHTML += `> ${cmd}<br>${response}<br>`;
+        output.scrollTop = output.scrollHeight;
+        input.value = "";
+      }
+    });
+  </script>
 </body>
 </html>
